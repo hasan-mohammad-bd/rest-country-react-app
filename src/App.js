@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect, useState } from "react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <LoadCountries></LoadCountries> */}
     </div>
   );
 }
 
+/*
+//to load data, there is 5 steps:
+function LoadCountries() {
+  const [countries, setCountries] = useState([]);
+
+  useEffect(() => {
+    fetch("https://restcountries.com/v3.1/all")
+      .then(res => res.json())
+      .then(data => setCountries(data));
+  });
+
+  return (
+    <div>
+      <h2>visiting all countries of the world</h2>
+      <h4>Available countries: {countries.length}</h4>
+      {
+        countries.map(country => <Country name={country.name.common} population={country.population}></Country>)
+      }
+    </div>
+  );
+}
+
+function Country(props){
+  return(
+    <div>
+      <h2>Name: {props.name}</h2>
+      <h3>Population: {props.population}</h3>
+    </div>
+  )
+}
+*/
 export default App;
