@@ -43,3 +43,5 @@ function Country(props){
 }
 */
 export default App;
+
+//find out how to deploy site vea github, and with netlify src from google.
